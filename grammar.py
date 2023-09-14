@@ -48,7 +48,7 @@ for x in range(6, 20, 3):
 testFunVal = 100
 
 
-def customSum(a, b):
+def custom_sum(a, b):
     """
     相加
     :param a: first
@@ -95,4 +95,14 @@ myTuple2 = (1,)  # 单个元素必须加,
 mySet = {'j', 'a', 'y', 'j'}  # 输出可能为 {'a', 'j', 'y'}
 mySet2 = set()  # 定义空集合
 print(mySet)
-# dict 字典： 类似于js的objct， pyton字典的key:value可以为任意类型（key类型不可以为字典）
+
+
+# dict 字典： 类似于js的object， python字典的key:value可以为任意类型（key类型不可以为字典）
+
+# func 的特性
+def test_fun(a, b=100, *c):  # 多个返回值 支持形参的最后面使用默认值, *剩余参数接收类型为tuple
+    return a, b
+
+
+val1, val2 = test_fun(1, 2, 3, 4, 56)
+print(f"测试函数的多个返回值{val1},{val2}")
