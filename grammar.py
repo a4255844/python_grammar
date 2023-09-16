@@ -22,6 +22,7 @@ print(type(int(age)))
 print(type(float(age)))
 # 测试if语句: if条件内代码必须有缩进 if else if 在python中被写为 if elif
 # 对结果取反用not关键字, if 内的代码块，没有自己的作用域，变量可以在全局中访问
+print([1, 2, 3] + [4, 5, 6])  # python中合并list 只要用 + 运算符就可以
 if 2 == 3:
     print('if内部进来了')
 elif not None:

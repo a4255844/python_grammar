@@ -3,11 +3,14 @@
 import time
 
 f = open("D:/testPython.txt", 'r', encoding='UTF-8')
-print(f.read(10))
-print(f.readline())  # 每次读取会接上次读取的进度
+# print(f.read(10))
+# print(f.readline())  # 每次读取会接上次读取的进度
 for p in f:  # for循环每次读取一行
     print(p)
+lines = f.readlines()  # 返回一个存储每一行的列表
+print(lines, 'l')
 f.close()  # 停止占用文件
+
 # 使用 with open 来打开文件, 会在代码段执行完毕后自动关闭文件.close()
 with open("D:/testPython.txt", 'r', encoding='UTF-8') as f2:
     for row in f2:
